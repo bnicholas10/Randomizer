@@ -3,24 +3,50 @@ import { useState } from "react";
 
 function App() {
   const [options, setOptions] = useState([]);
-  const [inbox, setInbox] = useState("");
+  const [input, setInput] = useState("");
   const [result, setResult] = useState("");
+
+  function randomChoice(arr) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    // console.log(arr[randomIndex]);
+    setResult(arr[randomIndex]);
+  }
+  // add option for number of rolls
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submit Button");
+    // console.log("Submit Button");
+    if (!input) {
+      setResult("Must enter an option");
+      setTimeout(() => {
+        setResult("");
+      }, "2000");
+    } else {
+      // add else if above here for functionality to check for multiple inputs at a time. ex. game 1; game 2
+      setOptions([...options, input]);
+      setInput("");
+    }
   };
 
   const handleClear = (e) => {
     e.preventDefault();
     console.log("Clear Button");
-    setInbox("");
     setOptions([]);
+    setResult("");
+    setInput("");
   };
 
   const handleRoll = (e) => {
     e.preventDefault();
-    console.log("Roll Button");
+    // console.log("Roll Button");
+    if (options.length < 2) {
+      setResult("Must enter more than one option");
+      setTimeout(() => {
+        setResult("");
+      }, "2000");
+    } else {
+      randomChoice(options);
+    }
   };
 
   return (
@@ -30,9 +56,9 @@ function App() {
         <input
           className="inputBox"
           placeholder="Enter Option"
-          value={inbox}
-          onChange={(event) => {
-            setInbox(event.target.value);
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
           }}
         />
         <div className="buttons">
@@ -49,8 +75,8 @@ function App() {
       <div className="optionList">
         <p>Choices</p>
         <ul>
-          {options.map((option) => (
-            <li key={option}>{option}</li>
+          {options.map((option, i) => (
+            <li key={i}>{option}</li>
           ))}
         </ul>
       </div>
