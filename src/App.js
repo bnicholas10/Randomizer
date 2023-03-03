@@ -1,6 +1,11 @@
 import "./app.scss";
 import { useState } from "react";
 
+// make result appear as pop up
+// make multiple sets
+// animation for picking and result
+// add option for number of rolls
+
 function App() {
   const [options, setOptions] = useState([]);
   const [input, setInput] = useState("");
@@ -11,11 +16,9 @@ function App() {
     // console.log(arr[randomIndex]);
     setResult(arr[randomIndex]);
   }
-  // add option for number of rolls
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Submit Button");
     if (!input) {
       setResult("Must enter an option");
       setTimeout(() => {
@@ -38,7 +41,6 @@ function App() {
 
   const handleRoll = (e) => {
     e.preventDefault();
-    // console.log("Roll Button");
     if (options.length < 2) {
       setResult("Must enter more than one option");
       setTimeout(() => {
@@ -51,7 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="Title">Random Picker</h1>
+      <h1 className="Title">Randomizer</h1>
       <form>
         <input
           className="inputBox"
@@ -71,9 +73,11 @@ function App() {
           <button onClick={handleRoll}>Roll</button>
         </div>
       </form>
-      <div id="result">Result: {result}</div>
+      <div id="resultContainer">
+        {result && <div id="result">Result: {result}</div>}
+      </div>
       <div className="optionList">
-        <p>Choices</p>
+        {/* <p>Choices</p> */}
         <ul>
           {options.map((option, i) => (
             <li key={i}>{option}</li>
@@ -83,9 +87,5 @@ function App() {
     </div>
   );
 }
-
-// make result appear as pop up
-// make multiple sets
-// animation for picking and result
 
 export default App;

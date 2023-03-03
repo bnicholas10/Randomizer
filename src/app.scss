@@ -1,16 +1,16 @@
-$myColor: orange;
+$primary: brown;
+$secondary: red;
+$tertiary: blue;
 
 body {
-  background-color: $myColor;
+  background-color: $primary;
   padding: 2%;
 }
 
 .App {
-  // background-color: $myColor;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .Title {
@@ -52,11 +52,12 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.75);
   min-height: 190px;
   min-width: 300px;
-  border: 5px white ridge;
-  // border-radius: 10px;
+  border: 10px rgba(255, 255, 255, 0.4) solid;
+  background-clip: padding-box;
+  border-radius: 4px;
   padding: 15px;
   box-shadow: 2px 2px 15px rgb(115, 75, 0);
   ul {
@@ -83,6 +84,15 @@ form {
     text-decoration: underline;
     margin-bottom: 15px;
   }
+  &:hover {
+    border: 10px rgba(255, 255, 255, 0.5) solid;
+    background-color: rgba(245, 245, 245, 0.8);
+  }
+}
+
+#resultContainer {
+  // background-color: blueviolet;
+  height: 55px;
 }
 
 #result {
