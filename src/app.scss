@@ -4,13 +4,14 @@ $tertiary: blue;
 
 body {
   background-color: $primary;
-  padding: 2%;
+  margin: 2%;
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .Title {
@@ -59,7 +60,6 @@ form {
   background-clip: padding-box;
   border-radius: 4px;
   padding: 15px;
-  box-shadow: 2px 2px 15px rgb(115, 75, 0);
   ul {
     list-style: none;
     margin-left: 0;
@@ -76,7 +76,6 @@ form {
       }
       margin-bottom: 2px;
       font-size: 24px;
-      text-shadow: r 5px 5px 5px;
     }
   }
   p {
@@ -86,17 +85,16 @@ form {
   }
   &:hover {
     border: 10px rgba(255, 255, 255, 0.5) solid;
-    background-color: rgba(245, 245, 245, 0.8);
+    // background-color: rgba(245, 245, 245, 0.8);
   }
 }
 
-#resultContainer {
-  // background-color: blueviolet;
-  height: 55px;
-}
+// #resultContainer {
+//   height: 55px;
+// }
 
-#result {
-  margin-bottom: 15px;
-  font-size: 36px;
-  // background-color: red;
-}
+// #result {
+//   margin-bottom: 15px;
+//   font-size: 36px;
+//   background-color: red;
+// }
