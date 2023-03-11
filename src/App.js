@@ -2,7 +2,6 @@ import "./app.scss";
 import { useState } from "react";
 import Popup from "./Popup";
 
-// make result appear as pop up
 // make multiple sets
 // animation for picking and result
 // add option for number of rolls
@@ -46,9 +45,6 @@ function App() {
     if (options.length < 2) {
       setResult("Must enter more than one option");
       setTrigger(true);
-      // setTimeout(() => {
-      //   setResult("");
-      // }, "2000");
     } else {
       randomChoice(options);
       setTrigger(true);
@@ -77,9 +73,6 @@ function App() {
           <button onClick={handleRoll}>Roll</button>
         </div>
       </form>
-      {/* <div id="resultContainer">
-        {result && <div id="result">Result: {result}</div>}
-      </div> */}
       {trigger && (
         <Popup result={result} setResult={setResult} setTrigger={setTrigger} />
       )}
@@ -90,14 +83,6 @@ function App() {
           ))}
         </ul>
       </div>
-      {/* <button
-        onClick={() => {
-          console.log(trigger);
-          setTrigger(!trigger);
-        }}
-      >
-        Toggle Trigger
-      </button> */}
     </div>
   );
 }
