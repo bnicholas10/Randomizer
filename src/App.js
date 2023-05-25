@@ -51,6 +51,16 @@ function App() {
     }
   };
 
+  const handleRemove = (e, i) => {
+    e.preventDefault();
+    setOptions([
+      ...options.slice(0, i),
+      ...options.slice(i + 1, options.length),
+    ]);
+    console.log("OPTIONS: ", options);
+    console.log(i, "Remove Item Clicked");
+  };
+
   return (
     <div className="App">
       <h1 className="Title">Randomizer</h1>
@@ -79,7 +89,16 @@ function App() {
       <div className="optionList">
         <ul>
           {options.map((option, i) => (
-            <li key={i}>{option}</li>
+            <>
+              <button
+                onClick={(e) => {
+                  handleRemove(e, i);
+                }}
+              >
+                X
+              </button>
+              <li key={i}>{option}</li>
+            </>
           ))}
         </ul>
       </div>
