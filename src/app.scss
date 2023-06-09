@@ -95,10 +95,10 @@ form {
   button {
     width: 20px;
     height: 20px;
-    background-color: rgba(255, 0, 0, 0.305);
+    background-color: rgba(255, 0, 0, 0.15);
     border: none;
     border-radius: 25%;
-    transition: ease-in 150ms;
+    transition: ease-in 175ms;
     &:hover {
       border: 2px solid darkred;
       background-color: rgba(255, 0, 0, 0.8);
