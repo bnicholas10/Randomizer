@@ -92,14 +92,16 @@ function App() {
         <ul>
           {options.map((option, i) => (
             <>
-              <button
-                onClick={(e) => {
-                  handleRemove(e, i);
-                }}
-              >
-                X
-              </button>
-              <li key={i}>{option}</li>
+              <span className="listing">
+                <button
+                  onClick={(e) => {
+                    handleRemove(e, i);
+                  }}
+                >
+                  X
+                </button>
+                <li key={i}>{option}</li>
+              </span>
             </>
           ))}
         </ul>
