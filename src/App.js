@@ -6,6 +6,8 @@ import Popup from "./Popup";
 // animation for picking and result
 // add option for number of rolls
 
+// **purposely not adding verification of duplicates so I can add in the same option multiple times for greater chances**
+
 function App() {
   const [options, setOptions] = useState([]);
   const [input, setInput] = useState("");
