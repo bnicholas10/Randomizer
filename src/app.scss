@@ -64,7 +64,6 @@ form {
   min-height: 190px;
   min-width: 300px;
   padding: 15px;
-
   background-color: rgba(245, 245, 245, 0.75);
   border: 10px rgba(255, 255, 255, 0.4) solid;
   background-clip: padding-box;
@@ -73,36 +72,26 @@ form {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-    text-align: center;
     li {
-      padding-left: 1em;
       margin-bottom: 2px;
-      text-indent: -1em;
       font-size: 24px;
-      // &::before,
-      // &::after {
-      //   content: "-";
-      //   padding-right: 5px;
-      //   padding-left: 5px;
-      // }
     }
-  }
-  p {
-    font-size: 32px;
-    text-decoration: underline;
-    margin-bottom: 15px;
   }
   &:hover {
     border: 10px rgba(255, 255, 255, 0.5) solid;
   }
   button {
+    position: relative;
+    right: 25px;
     width: 20px;
     height: 20px;
     background-color: rgba(255, 0, 0, 0.15);
+
     border: none;
     border-radius: 25%;
     transition: ease-in 175ms;
     &:hover {
+      color: white;
       border: 2px solid darkred;
       background-color: rgba(255, 0, 0, 0.8);
     }
