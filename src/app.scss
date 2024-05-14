@@ -52,8 +52,22 @@ form {
     justify-content: space-around;
   }
   button {
-    height: 35px;
+    height: 40px;
     flex: 2 1 auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: transparent solid 3px;
+    background-clip: padding-box;
+    font-family: "Raleway", sans-serif;
+    transition: ease-in 175ms;
+    border-radius: 10px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 3px rgba(255, 255, 255, 0.4) solid;
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.4);
+      border: transparent solid 3px;
+    }
   }
 }
 
@@ -78,7 +92,7 @@ form {
     }
   }
   &:hover {
-    border: 10px rgba(255, 255, 255, 0.5) solid;
+    border: 10px rgba(255, 255, 255, 0.475) solid;
   }
   button {
     position: relative;
