@@ -75,8 +75,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 190px;
-  min-width: 300px;
+  min-height: 200px;
+  width: 300px;
   padding: 15px;
   background-color: rgba(245, 245, 245, 0.75);
   border: 10px rgba(255, 255, 255, 0.4) solid;
@@ -86,6 +86,9 @@ form {
     margin-left: 0;
     padding-left: 0;
     li {
+      text-align: center;
+      width: 180px;
+      word-wrap: break-word;
       margin-bottom: 2px;
       font-size: 24px;
     }
@@ -99,7 +102,6 @@ form {
     width: 20px;
     height: 20px;
     background-color: rgba(255, 0, 0, 0.15);
-
     border: none;
     border-radius: 25%;
     transition: ease-in 175ms;
