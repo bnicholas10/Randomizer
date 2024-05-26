@@ -12,7 +12,7 @@
 }
 
 .popupBox {
-  position: relative;
+  position: fixed;
   top: 140px;
   min-width: 345px;
   display: flex;
@@ -28,6 +28,7 @@
   border: 8px rgba(255, 255, 255, 0.25) solid;
   background-clip: padding-box;
   transition: ease-in 175ms;
+  z-index: 2;
   p {
     margin-bottom: 15px;
     font-size: 30px;

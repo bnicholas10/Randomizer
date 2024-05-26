@@ -31,7 +31,6 @@ function App() {
 
   const handleClear = (e) => {
     e.preventDefault();
-    console.log("Clear Button");
     setOptions([]);
     setResult("");
     setInput("");
