@@ -18,7 +18,7 @@ const Popup = (props) => {
       }}
     >
       <div className="popupBox">
-        <p>Result: {result}</p>
+        <p>{result}</p>
         <button className="popupClose" onClick={handleClose}>
           Close
         </button>

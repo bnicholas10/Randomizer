@@ -4,9 +4,6 @@ import Popup from "./Popup";
 
 // make multiple sets
 // animation for picking and result
-// add option for number of rolls
-
-// **purposely not adding verification of duplicates so I can add in the same option multiple times for greater chances**
 
 function App() {
   const [options, setOptions] = useState([]);
@@ -27,7 +24,6 @@ function App() {
         setResult("");
       }, "2000");
     } else {
-      // add else if above here for functionality to check for multiple inputs at a time. ex. game 1; game 2
       setOptions([...options, input]);
       setInput("");
     }
@@ -59,8 +55,6 @@ function App() {
       ...options.slice(0, i),
       ...options.slice(i + 1, options.length),
     ]);
-    console.log("OPTIONS: ", options);
-    console.log(i, "Remove Item Clicked");
   };
 
   return (
