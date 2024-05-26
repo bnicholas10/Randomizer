@@ -11,19 +11,21 @@ const Popup = (props) => {
   };
 
   return (
-    <div
-      className="popupContainer"
-      onClick={() => {
-        setTrigger(false);
-      }}
-    >
-      <div className="popupBox">
-        <p>{result}</p>
-        <button className="popupClose" onClick={handleClose}>
-          Close
-        </button>
+    <>
+      <div
+        className="popupContainer"
+        onClick={() => {
+          setTrigger(false);
+        }}
+      >
+        <div className="popupBox">
+          <p>{result}</p>
+          <button className="popupClose" onClick={handleClose}>
+            Close
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
